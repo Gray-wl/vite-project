@@ -100,3 +100,13 @@ Vite插件是一个拥有名称、创建钩子（build hook）或者生成钩子
 - handleHotUpdate：自定义HMR更新时调用
 
 ![img.png](img.png)
+
+####插件顺序
+- 别名处理Alias
+- 用户插件设置`enforce: 'pre'`
+- Vite核心插件
+- 用户插件未设置`enforce`
+- Vite构建插件
+- 用户插件设置`enforce: 'post'`
+- Vite设置后置插件（minify，manifest，reporting）
+![img_1.png](img_1.png)

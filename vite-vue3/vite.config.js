@@ -4,7 +4,10 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import legacy from '@vitejs/plugin-legacy'
 import { viteMockServe } from 'vite-plugin-mock'
+import vueI18n from '@intlify/vite-plugin-vue-i18n'
 import myExample from './plugins/vite-plugin-my-example'
+// import viteMockServe from './plugins/vite-plugin-mock'
+// import vueI18n from './plugins/vite-plugin-vue-i18n'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,5 +32,7 @@ export default defineConfig({
     supportTs: false
   }), legacy({
     targets: ['defaults', 'not IE 11']
+  }), vueI18n({
+    include: path.resolve(__dirname, './src/locales/**')
   }), myExample()]
 })
