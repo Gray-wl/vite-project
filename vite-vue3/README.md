@@ -4,7 +4,9 @@
 ###官方地址 https://www.pipipi.net/vite/
 
 项目搭建
-`npm init @vitejs/app`
+```bash
+npm init @vitejs/app
+```
 
 - vue2工程创建
 - 主要变化总结（对比vite1）
